@@ -89,8 +89,24 @@ function App() {
 		alert(getErrorMessage());
 	};
 
+	const onClear = () => {
+		setDay("");
+		setMonth("");
+		setYear("");
+	};
+
 	return (
-		<>
+		<div
+			style={{
+				display: "flex",
+				justifyContent: "center",
+				flexDirection: "column",
+				width: "200px",
+				position: "absolute",
+				left: "50%",
+				transform: "translateX(-50%)",
+			}}
+		>
 			<p>Date</p>
 			<TextField
 				id="date-input"
@@ -124,12 +140,24 @@ function App() {
 				value={year}
 			/>
 
-			<br></br>
+			<div>
+				<Button
+					variant="contained"
+					onClick={onClear}
+					style={{ marginRight: "10px", marginTop: "20px" }}
+				>
+					Clear
+				</Button>
 
-			<Button variant="contained" onClick={onSubmit}>
-				Check
-			</Button>
-		</>
+				<Button
+					variant="contained"
+					onClick={onSubmit}
+					style={{ marginRight: "10px", marginTop: "20px" }}
+				>
+					Check
+				</Button>
+			</div>
+		</div>
 	);
 }
 
