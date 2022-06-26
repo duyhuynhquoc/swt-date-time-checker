@@ -29,13 +29,15 @@ function App() {
 			month === "10" ||
 			month === "12"
 		)
-			return 31;
+			// return 31;
+			return 30;
 
 		if (month === "4" || month === "6" || month === "9" || month === "11")
 			return 30;
 
 		if (month === "2") {
-			return isLeapYear(year) ? 29 : 28;
+			// return isLeapYear(year) ? 29 : 28;
+			return 28;
 		}
 	};
 
@@ -70,9 +72,6 @@ function App() {
 	};
 
 	const getErrorMessage = () => {
-		console.log(isLeapYear(year));
-		console.log(daysInMonth(month, year));
-
 		let result = "";
 		result = validateDayFormat(day);
 		if (result !== "") return result;
