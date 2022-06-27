@@ -36,8 +36,8 @@ function App() {
 			return 30;
 
 		if (month === "2") {
-			// return isLeapYear(year) ? 29 : 28;
 			return 28;
+			// return isLeapYear(year) ? 29 : 28;
 		}
 	};
 
